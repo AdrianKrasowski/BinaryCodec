@@ -1,4 +1,5 @@
 ﻿using BinaryCodec.Abstract;
+using BinaryCodec.Codecs;
 using BinaryCodec.Models;
 using System;
 using System.Collections.Generic;
