@@ -6,8 +6,8 @@ namespace BinaryCodec.Consts
 {
     public static class LenghtInBytes
     {
-        private static int IntegerLength => 4;
-        private static int CharLength => 2;
-        private static int AsciiCharLength => 1;
+        public static int IntegerLength => 4;
+        public static int CharLength => 2;
+        public static int AsciiCharLength => 1;
     }
 }
