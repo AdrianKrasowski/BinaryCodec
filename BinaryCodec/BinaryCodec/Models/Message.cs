@@ -10,8 +10,8 @@ namespace BinaryCodec.Models
             Headers = new Dictionary<string, string>();
         }
 
-        public Dictionary<String, String> Headers;
-        public byte[] Payload;
+        public Dictionary<String, String> Headers { get; set; }
+        public byte[] Payload { get; set; }
 
         public byte HeadersNumber => (byte)Headers.Count;
         public int PayloadBytes => Payload.Length;

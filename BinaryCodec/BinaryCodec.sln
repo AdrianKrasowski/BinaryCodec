@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryCodec", "BinaryCodec\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryCodec.Test", "BinaryCodec.Test\BinaryCodec.Test.csproj", "{61000DBC-DB0D-4141-90DA-1BBE304F156A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryCodecTestingApp", "BinaryCodecTestingApp\BinaryCodecTestingApp.csproj", "{D90D009D-7912-4908-8F65-BE13AEC1A62E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{61000DBC-DB0D-4141-90DA-1BBE304F156A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61000DBC-DB0D-4141-90DA-1BBE304F156A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61000DBC-DB0D-4141-90DA-1BBE304F156A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D90D009D-7912-4908-8F65-BE13AEC1A62E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D90D009D-7912-4908-8F65-BE13AEC1A62E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D90D009D-7912-4908-8F65-BE13AEC1A62E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D90D009D-7912-4908-8F65-BE13AEC1A62E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

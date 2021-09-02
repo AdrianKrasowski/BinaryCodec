@@ -1,6 +1,8 @@
 ﻿using BinaryCodec.Codecs.Abstract;
 using BinaryCodec.Converters;
+using BinaryCodec.Exceptions;
 using BinaryCodec.Models;
+using BinaryCodec.Validators;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,15 +13,21 @@ namespace BinaryCodec.Codecs
     {
         private readonly Int32ToByteArrayConverter int32ToByteConverter;
         private readonly ASCIIStringToBytesConverter asciiStringToBytesConverter;
+        private readonly MessageValidator validator;
 
         public MessageCoder()
         {
             int32ToByteConverter = new Int32ToByteArrayConverter();
             asciiStringToBytesConverter = new ASCIIStringToBytesConverter();
+            validator = new MessageValidator();
         }
 
         public byte[] CodeMesssage(Message message)
         {
+            if (!String.IsNullOrEmpty(validator.Validate(message, out string validationResult)))
+            {
+                throw new InvalidMessageException(validationResult);
+            }
             var outputBytes = new List<byte>();
 
             outputBytes.Add(message.HeadersNumber);

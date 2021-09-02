@@ -1,5 +1,6 @@
 ﻿using BinaryCodec.Abstract;
 using BinaryCodec.Codecs;
+using BinaryCodec.Codecs.Abstract;
 using BinaryCodec.Models;
 using System;
 using System.Collections.Generic;
@@ -9,16 +10,41 @@ namespace BinaryCodec
 {
     public class MessageCodec : IMessageCodec
     {
-        private readonly MessageDecoder _messageDecoder;
+        private readonly IMessageDecoder messageDecoder;
+        private readonly IMessageCoder messageCoder;
+
+        public MessageCodec()
+        {
+            messageDecoder = new MessageDecoder();
+            messageCoder = new MessageCoder();
+        }
 
         public Message Decode(byte[] data)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = messageDecoder.DecodeMessage(data);
+                return result;
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+                return null;
+            }
         }
 
         public byte[] Encode(Message message)
         {
-            throw new NotImplementedException();
+            try
+            {
+                var result = messageCoder.CodeMesssage(message);
+                return result;
+            }
+            catch (Exception exc)
+            {
+                Console.WriteLine(exc.Message);
+                return null;
+            }
         }
     }
 }
