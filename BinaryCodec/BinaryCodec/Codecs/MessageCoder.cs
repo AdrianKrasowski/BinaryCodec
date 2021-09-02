@@ -5,7 +5,6 @@ using BinaryCodec.Models;
 using BinaryCodec.Validators;
 using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BinaryCodec.Codecs
 {
@@ -33,13 +32,13 @@ namespace BinaryCodec.Codecs
             outputBytes.Add(message.HeadersNumber);
             foreach (KeyValuePair<string, string> header in message.Headers)
             {
-                outputBytes.AddRange(CodeHeader(header.Key, header.Value));
+                outputBytes.AddRange(EncodeHeader(header.Key, header.Value));
             }
-            outputBytes.AddRange(CodePayload(message.Payload));
+            outputBytes.AddRange(EncodePayload(message.Payload));
             return outputBytes.ToArray();
         }
 
-        private List<byte> CodePayload(byte[] payload)
+        private List<byte> EncodePayload(byte[] payload)
         {
             var payloadBytes = new List<byte>();
             payloadBytes.AddRange(int32ToByteConverter.Convert(payload.Length));
@@ -47,7 +46,7 @@ namespace BinaryCodec.Codecs
             return payloadBytes;
         }
 
-        private List<byte> CodeHeader(string key, string value)
+        private List<byte> EncodeHeader(string key, string value)
         {
             var headerBytes = new List<byte>();
             headerBytes.AddRange(int32ToByteConverter.Convert(key.Length));

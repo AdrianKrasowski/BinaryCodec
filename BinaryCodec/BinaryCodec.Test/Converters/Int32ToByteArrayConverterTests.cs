@@ -1,7 +1,4 @@
 ﻿using BinaryCodec.Converters;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace BinaryCodec.Test.Converters

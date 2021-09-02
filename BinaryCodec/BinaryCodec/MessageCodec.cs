@@ -3,8 +3,6 @@ using BinaryCodec.Codecs;
 using BinaryCodec.Codecs.Abstract;
 using BinaryCodec.Models;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace BinaryCodec
 {

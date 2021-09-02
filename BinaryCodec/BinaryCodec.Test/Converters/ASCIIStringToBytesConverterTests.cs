@@ -1,8 +1,4 @@
 ﻿using BinaryCodec.Converters;
-using BinaryCodec.Exceptions;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace BinaryCodec.Test.Converters
@@ -30,6 +26,5 @@ namespace BinaryCodec.Test.Converters
             //Assert
             Assert.Equal(expectedResult, result);
         }
-
     }
 }

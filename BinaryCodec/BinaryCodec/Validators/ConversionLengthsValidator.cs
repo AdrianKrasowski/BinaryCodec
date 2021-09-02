@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace BinaryCodec.Validators
+﻿namespace BinaryCodec.Validators
 {
     public class ConversionLengthsValidator
     {
