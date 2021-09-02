@@ -8,7 +8,7 @@ namespace BinaryCodec.Models
         public Dictionary<String, String> Headers;
         public byte[] Payload;
 
-        public int HeadersNumber => Headers.Count;
+        public byte HeadersNumber => (byte)Headers.Count;
         public int PayloadBytes => Payload.Length;
     }
 }

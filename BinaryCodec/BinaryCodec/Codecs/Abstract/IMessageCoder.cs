@@ -7,6 +7,6 @@ namespace BinaryCodec.Codecs.Abstract
 {
     internal interface IMessageCoder
     {
-        Message DecodeMesssage(byte[] encodedMessage);
+        byte[] CodeMesssage(Message message);
     }
 }
