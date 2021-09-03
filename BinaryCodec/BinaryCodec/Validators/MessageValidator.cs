@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BinaryCodec.Validators
 {
-    internal class MessageValidator
+    public class MessageValidator
     {
         public string Validate(Message message, out string validationResult)
         {
