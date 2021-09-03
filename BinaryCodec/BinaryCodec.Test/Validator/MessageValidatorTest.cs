@@ -2,8 +2,6 @@
 using BinaryCodec.Models;
 using BinaryCodec.Validators;
 using System;
-using System.Collections.Generic;
-using System.Text;
 using Xunit;
 
 namespace BinaryCodec.Test.Validator

@@ -1,8 +1,6 @@
 ﻿using BinaryCodec.Consts;
 using BinaryCodec.Models;
-using System;
 using System.Collections.Generic;
-using System.Text;
 
 namespace BinaryCodec.Validators
 {
